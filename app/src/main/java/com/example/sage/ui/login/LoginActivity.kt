@@ -1,6 +1,7 @@
 package com.example.sage.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -16,6 +17,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.example.sage.R
+import com.example.sage.SignUpActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -95,6 +97,15 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
+    }
+
+    fun signUp(view: View) {
+//        val signUp = Toast.makeText(this, "Sign Up", Toast.LENGTH_SHORT);
+//        signUp.show();
+        val randomIntent = Intent(this, SignUpActivity::class.java)
+
+// Start the new activity.
+        startActivity(randomIntent)
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
