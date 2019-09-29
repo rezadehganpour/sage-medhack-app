@@ -6,6 +6,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.MultiAutoCompleteTextView
+import android.preference.PreferenceManager
+import android.content.SharedPreferences
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import sun.jvm.hotspot.utilities.IntArray
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import sun.jvm.hotspot.utilities.IntArray
+
+
+
+
 
 
 class SignUpActivity : AppCompatActivity() {
@@ -41,11 +57,11 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun submitSignUp(view: View) {
-//        val signUp = Toast.makeText(this, "Sign Up", Toast.LENGTH_SHORT);
-//        signUp.show();
+        val myPreferences = PreferenceManager.getDefaultSharedPreferences(this@SignUpActivity)
+        val myEditor = myPreferences.edit()
+        val
         val randomIntent = Intent(this, MainActivity::class.java)
 
-// Start the new activity.
         startActivity(randomIntent)
     }
 

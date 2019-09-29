@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
+import com.example.sage.ScanInformation.Companion.QR_RESPONSE
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,9 +25,13 @@ class MainActivity : AppCompatActivity() {
             val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
             if (result != null) {
                 if (result.contents == null) {
-                    Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "No Data Found", Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG).show()
+                    val randomIntent = Intent(this, ScanInformation::class.java)
+                    randomIntent.putExtra(QR_RESPONSE, result.contents)
+// Start the new activity.
+                    startActivity(randomIntent)
                 }
             } else {
                 super.onActivityResult(requestCode, resultCode, data)
