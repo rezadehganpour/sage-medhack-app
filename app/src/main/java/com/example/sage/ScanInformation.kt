@@ -39,7 +39,5 @@ class ScanInformation : AppCompatActivity() {
         const val QR_RESPONSE = "qr_response"
         const val VALID = "Validated Drug"
         const val COUNTERFEIT = "Counterfeit Drug"
-
-
     }
 }

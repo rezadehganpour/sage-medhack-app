@@ -24,7 +24,7 @@
                 android:text="Personal Information" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/signup_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -33,7 +33,7 @@
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="66dp" />
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/signup_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -43,7 +43,7 @@
                 tools:layout_editor_absoluteY="277dp" />
 
             <EditText
-                android:id="@+id/firstName"
+                android:id="@+id/signup_firstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -53,17 +53,17 @@
                 tools:layout_editor_absoluteY="213dp" />
 
             <EditText
-                android:id="@+id/lastName"
+                android:id="@+id/signup_lastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Last Name"
                 android:inputType="textPersonName"
-                android:hint="First Name"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="213dp" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/signup_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -73,12 +73,17 @@
                 tools:layout_editor_absoluteY="357dp" />
 
 
-            <EditText
-                android:id="@+id/editText7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textEmailAddress" />
+            <Spinner
+            android:id="@+id/signup_country"
+            android:layout_width="206dp"
+            android:layout_height="39dp"
+            android:entries="@array/countries_array" />
+
+            <Spinner
+                android:id="@+id/signup_genrder"
+                android:layout_width="206dp"
+                android:layout_height="39dp"
+                android:entries="@array/gender_array" />
 
             <TextView
                 android:id="@+id/medicalInformation"
@@ -103,7 +108,7 @@
                 tools:layout_editor_absoluteY="425dp" />
 
             <MultiAutoCompleteTextView
-                android:id="@+id/Symptoms"
+                android:id="@+id/symptoms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Current Symptoms"

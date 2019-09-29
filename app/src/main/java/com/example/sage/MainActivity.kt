@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
@@ -18,6 +19,12 @@ class MainActivity : AppCompatActivity() {
             val scanner = IntentIntegrator(this)
             scanner.initiateScan()
         }
+    }
+
+    fun user_info(view: View) {
+        val randomIntent = Intent(this, UserInformation::class.java)
+
+        startActivity(randomIntent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

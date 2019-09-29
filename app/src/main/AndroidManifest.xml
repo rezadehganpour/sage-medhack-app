@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ScanInformation"></activity>
+        <activity android:name=".MySyptoms"></activity>
+        <activity android:name=".UserInformation" />
+        <activity android:name=".ScanInformation" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
