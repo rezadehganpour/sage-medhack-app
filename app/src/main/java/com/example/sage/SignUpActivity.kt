@@ -86,5 +86,5 @@ class SignUpActivity : AppCompatActivity() {
 
     private val DIAGNOSIS = arrayOf("Diabetes", "High Cholesterol", "High Blood Pressure")
     private val MEDICATIONS = arrayOf("Insulin", "Aspirin", "Diuretics")
-    private val SYMPTHOMS = arrayOf("Diarrhea", "Weakness", "Fever")
+    private val SYMPTHOMS = arrayOf("Diarrhea", "Muscle Aaches", "Fever")
 }

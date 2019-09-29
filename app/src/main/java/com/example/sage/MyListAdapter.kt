@@ -15,11 +15,11 @@ class MyListAdapter(private val context: Activity, private val title: Array<Stri
         val rowView = inflater.inflate(R.layout.custom_list, null, true)
 
         val titleText = rowView.findViewById(R.id.title) as TextView
-        val imageView = rowView.findViewById(R.id.icon) as ImageView
+        //val imageView = rowView.findViewById(R.id.icon) as ImageView
         val subtitleText = rowView.findViewById(R.id.description) as TextView
 
         titleText.text = title[position]
-        imageView.setImageResource(imgid[position])
+        //imageView.setImageResource(imgid[position])
         subtitleText.text = description[position]
 
         return rowView
